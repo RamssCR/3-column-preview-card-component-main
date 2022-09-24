@@ -1,0 +1,138 @@
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --pWhite: hsla(0, 0%, 100%, 0.75);
+    --bhbWhite: hsl(0, 0%, 95%);
+    --fontFamily: 'Lexend Deca', sans-serif;
+    --title: 'Big Shoulders Display', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bhbWhite);
+    color: var(--pWhite);
+    font-size: 15px;
+    font-family: var(--fontFamily);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 40px auto;
+    width: 21em;
+}
+
+.main-container .card{
+    padding: 40px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.main-container .card .title{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--bhbWhite);
+    font-family: var(--title);
+}
+
+.main-container .card .text{
+    line-height: 24px;
+}
+
+.main-container .card .lm{
+    text-align: center;
+    width: 10em;
+    border-radius: 25px;
+    border: 2px solid var(--bhbWhite);
+    font-family: var(--fontFamily);
+    background-color: var(--bhbWhite);
+    padding: 15px 0;
+    font-size: 0.95rem;
+    transition: 300ms all ease;
+}
+
+.main-container .card:first-of-type{
+    background-color: var(--BrightOrange);
+    border-radius: 10px 10px 0 0;
+}
+
+.main-container .card:nth-of-type(2){
+    background-color: var(--DarkCyan);
+}
+
+.main-container .card .orange{
+    color: var(--BrightOrange);
+}
+
+.main-container .card .lm:hover{
+    color: var(--bhbWhite);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main-container .card .cg{
+    color: var(--DarkCyan);
+}
+
+.main-container .card:last-of-type{
+    background-color: var(--VeryDarkCyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.main-container .card .dg{
+    color: var(--VeryDarkCyan);
+}
+
+.attribution{
+    text-align: center;
+    padding: 10px 0;
+    color: var(--VeryDarkCyan);
+}
+
+.attribution a{
+    color: var(--DarkCyan);
+    text-decoration: none;
+}
+
+.attribution a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 1115px){
+    .main-container{
+        width: min-content;
+        flex-direction: row;
+        margin-top: 80px;
+    }
+
+    .main-container .card{
+        width: 20em;
+        padding: 40px 45px;
+        gap: 30px;
+    }
+
+    .main-container .card .lm{
+        margin-top: 40px;
+    }
+
+    .main-container .card:first-of-type{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .main-container .card:last-of-type{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .attribution{
+        margin-top: 70px;
+    }
+}
